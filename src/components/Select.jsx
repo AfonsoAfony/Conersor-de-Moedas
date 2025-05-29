@@ -20,7 +20,7 @@ const [conjuntoRate,setConjuntoRate]=useState(["Banana,Arros,Maça"])
     const [opcoes,setOpcoes]=useState(Array("USD", "AOA", "EUR", "EUR"));
 
   return (
-    <select onChange={onChange} name={name} id={id} className="bg-white text-black rounded w-50 h-10 text-center my-2">
+    <select onChange={onChange} name={name} id={id} className="bg-white text-black rounded w-70 h-10 text-center my-4">
      {
     conjuntoRate.map((value,index)=>(
       <option key={index} value={value[0]}>
