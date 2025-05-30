@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Select({onChange,name,id}){
+function Select({onChange,name,id,label,Labelpara}){
 
    async function PreencherSelects (){
     const res= await fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
@@ -17,10 +17,10 @@ const [conjuntoRate,setConjuntoRate]=useState(["Banana,Arros,Maça"])
 
   })
   
-    const [opcoes,setOpcoes]=useState(Array("USD", "AOA", "EUR", "EUR"));
-
   return (
-    <select onChange={onChange} name={name} id={id} className="bg-white text-black rounded w-70 h-10 text-center my-4">
+    <div className="flex flex-col bg-gray-900 rounded my-1 px-2 py-1">
+    <label htmlFor={Labelpara} className=" text-md text-start  text-gray-300">{label}</label>
+    <select onChange={onChange} name={name} id={id} className="text-start  bg-gray-900 text-white rounded w-70 h-7">
      {
     conjuntoRate.map((value,index)=>(
       <option key={index} value={value[0]}>
@@ -30,6 +30,7 @@ const [conjuntoRate,setConjuntoRate]=useState(["Banana,Arros,Maça"])
   }
 
     </select>
+    </div>
   );
 }
 

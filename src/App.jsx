@@ -8,8 +8,8 @@ function App() {
   
 
   return (
-    <div className=' my-32'>
-  <h1 className="text-xl text-green-600 my-8 ">Conversor de Moedas:</h1>
+    <div className=' my-32' >
+  <h1 className="text-3xl sm:text-6xl text-cyan-500 my-11 ">Conversor de Moedas:</h1>
   <Conversor/>
     </div>
   
