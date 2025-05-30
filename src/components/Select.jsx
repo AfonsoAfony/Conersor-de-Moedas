@@ -19,8 +19,8 @@ const [conjuntoRate,setConjuntoRate]=useState(["Banana,Arros,Maça"])
   
   return (
     <div className="flex flex-col bg-gray-900 rounded my-1 px-2 py-1">
-    <label htmlFor={Labelpara} className=" text-md text-start  text-gray-300">{label}</label>
-    <select onChange={onChange} name={name} id={id} className="text-start  bg-gray-900 text-white rounded w-70 h-7">
+    <label htmlFor={Labelpara} className="sm:text-4xl text-md text-start  text-gray-300">{label}</label>
+    <select onChange={onChange} name={name} id={id} className="w-200 sm:h-20 lg:h-15 sm:text-5xl lg:text-2xl text-start  bg-gray-900 text-white rounded w-70 h-7">
      {
     conjuntoRate.map((value,index)=>(
       <option key={index} value={value[0]}>
