@@ -1,6 +1,203 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+html {
+  scroll-behavior:smooth;
 }
+
+:root {
+  overflow-x:hidden;
+  margin: 0 auto;
+  text-align: center;
+  background-color:rgba(16,24,40);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+    --dark-10: #ffffff;
+    --dark-20: #17171A;
+    --dark-30: #fff;
+    --dark-40: #afabb66c;
+    --dark-50: #20200A;
+    --dark-60:#fff;
+    --dark-70: #323232;
+}
+
+.FontBitcount{
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+ 
+}
+.transicao{
+  transition: all 1s ease; /* Aplica transição lenta em todos os estilos */
+  position: relative; 
+}
+
+#cabecalho{
+    width:100%; 
+
+     background: 
+    linear-gradient(rgba(0,0,0,0.5), rgb(1, 26, 88)),
+    url('./assets/img/bg1.png');
+
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+   
+}
+#bgMoedas{
+
+    background-image: url('./assets/img/mao.png');
+   
+    background-size:220%;
+    background-repeat:no-repeat;
+    background-position:center; 
+}
+#container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#container #texto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    width: 550px;
+    margin: 30px 0 30px 0;
+}
+
+#container #texto h1{
+   font-size: 2rem;
+     color: #000;
+   margin: 29px 0 24px 0
+ }
+ #texto p{
+    color: #000;
+    font-size: larger;
+   
+ }
+ 
+
+
+
+
+
+
+
+ 
+@media(max-width:575.9px){
+   #cabecalho{
+    background-repeat:no-repeat;
+    background-position-x:24.9%;
+   
+    }
+    #container #texto h1{
+   font-size: 1.6rem;
+    }
+    section#texto p{
+        font-size: 1rem;
+        padding: 0 100px 0 100px;
+    }
+@media(min-width:576px) and (max-width:767.9px){
+  
+    #cabecalho{
+    
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position-x:20%;
+   
+   
+    }
+    section#texto p{
+        font-size: 1rem;
+    }
+}
+@media(min-width:768px) and (max-width:991.9px){
+  
+     #cabecalho{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position-x:30%;
+   
+    }
+
+  }
+
+@media(min-width:902px) and (max-width:1100px){
+      
+        #cabecalho{
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position-x:30%;
+      
+    }
+
+  }  
+  
+}
+
+
+
+
+
+/*******************************************************/
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+h1 {
+  margin: auto;
+  font-weight: 450;
+  animation: lights 5s 750ms linear infinite;
+}
+/*******************************************************/
